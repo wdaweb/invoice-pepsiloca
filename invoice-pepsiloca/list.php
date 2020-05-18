@@ -37,9 +37,9 @@ if(isset($_GET['period'])){
 
 $sql="select * from invoice where period='$period'";
 $rows=$pdo->query($sql)->fetchAll();
-?>
 
-<table class="table">
+?>
+<table>
     <tr>
         <td>編號</td>
         <td>標記</td>
@@ -60,6 +60,6 @@ $rows=$pdo->query($sql)->fetchAll();
     ?>
 </table>
 
-    
+
 </body>
 </html>
