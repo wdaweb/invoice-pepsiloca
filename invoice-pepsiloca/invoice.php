@@ -28,10 +28,6 @@ $yaer=date("Y");
 <body>
 <?php include "./include/header.php";?>    
 
-
-
-<a herf="add_invoice.php"><button>新增獎號</button>
-
 <h1>期別</h1>
 <ul class="nav">
 <li><a href="invoice.php?period=1" style="background:<?=($period==1)?'pink':'white';?>">1(1,2)</a></li>
@@ -42,7 +38,7 @@ $yaer=date("Y");
 <li><a href="invoice.php?period=6" style="background:<?=($period==6)?'pink':'white';?>">6(11,12)</a></li>
 </ul>
 
-
+<a herf="add_invoice.php"><button>新增獎號</button></a>
 
 <?php
 
@@ -53,9 +49,6 @@ $num3=all('award_number',['period'=>$period,'year=>$year','type'=>3]);//多筆
 $num4=all('award_number',['period'=>$period,'year=>$year','type'=>4]);//多筆
 
 ?>
-
-
-
 
 <table class="invoice-table">
     <tr>
@@ -68,9 +61,9 @@ $num4=all('award_number',['period'=>$period,'year=>$year','type'=>4]);//多筆
         <?php
         if(!empty($num1['number'])){
             echo $num1['number']; //判斷資料存在會印出 避免出現錯誤訊息
-        }
+        };
         ?></td>
-        <td><a herf="award.php?aw=1&year=<?=$year;?>&period=<?=$period;?>">對獎</td>
+        <td><a herf="award.php?aw=1&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
     <tr>
         <td>特獎</td>
@@ -79,7 +72,7 @@ $num4=all('award_number',['period'=>$period,'year=>$year','type'=>4]);//多筆
             echo $num2['number']; 
         }
         ?></td>
-        <td><a herf="award.php?aw=2&year=<?=$year;?>&period=<?=$period;?>">對獎</td>
+        <td><a herf="award.php?aw=2&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
     <tr>
         <td>頭獎</td>
@@ -90,27 +83,27 @@ $num4=all('award_number',['period'=>$period,'year=>$year','type'=>4]);//多筆
             }
             ?>
         </td>
-        <td><a herf="award.php?aw=3&year=<?=$year;?>&period=<?=$period;?>">對獎</td>
+        <td><a herf="award.php?aw=3&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
     <tr>
         <td>二獎</td>
         <td></td>
-        <td><a herf="award.php?aw=4&year=<?=$year;?>&period=<?=$period;?>">對獎</td>
+        <td><a herf="award.php?aw=4&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
     <tr>
         <td>參獎</td>
         <td></td>
-        <td><a herf="award.php?aw=5&year=<?=$year;?>&period=<?=$period;?>">對獎</td>
+        <td><a herf="award.php?aw=5&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
     <tr>
         <td>四獎</td>
         <td></td>
-        <td><a herf="award.php?aw=6&year=<?=$year;?>&period=<?=$period;?>">對獎</td>
+        <td><a herf="award.php?aw=6&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
     <tr>
         <td>五獎</td>
         <td></td>
-        <td><a herf="award.php?aw=7&year=<?=$year;?>&period=<?=$period;?>">對獎</td>
+        <td><a herf="award.php?aw=7&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
     <tr>
         <td>六獎</td>
@@ -126,7 +119,7 @@ $num4=all('award_number',['period'=>$period,'year=>$year','type'=>4]);//多筆
             }
             ?>
         </td>
-        <td><a herf="award.php?aw=9&year=<?=$year;?>&period=<?=$period;?>">對獎</td>
+        <td><a herf="award.php?aw=9&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
 </table>
 </body>
