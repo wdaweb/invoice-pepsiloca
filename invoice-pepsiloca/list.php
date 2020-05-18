@@ -35,8 +35,8 @@ if(isset($_GET['period'])){
 
 <?php
 
-$sql="select * from invoice where period='$period'";
-$rows=$pdo->query($sql)->fetchAll();
+//$sql="select * from invoice where period='$period'";
+$rows=all('invoice',['period'=>$period]);
 
 ?>
 <table>

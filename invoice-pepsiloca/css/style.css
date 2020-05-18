@@ -1,35 +1,48 @@
 *{
     margin:0;
-    padding:0;
-    box-sizing:border-box;
-
+    padding: 0;
+    box-sizing: border-box;
 }
-
 .header{
     height:50px;
     border:1px solid #999;
-    box-shadow:0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
 }
 
-.nav {
-
-    /* list-style-type: none; */
+.header ul{
+    list-style-type: none;
 }
-.nav li{
-    display:inline-block;
+.header ul li{
+    display: inline-block;
     padding:5px;
     margin:0 10px;
     border:1px solid #ccc;
     border-radius:3px;
+}
+.header ul li a{
+    text-decoration:none; 
+}
 
+.nav{
+    list-style-type: none;
+}
+.nav li{
+    display: inline-block;
+    padding:5px;
+    margin:0 10px;
+    border:1px solid #ccc;
+    border-radius:3px;
 }
 
 .nav li a{
     text-decoration:none;
 }
 
-.table{
-    margin
-    padding:20px;
-    border:1px solid #eee;
+.invoice-table{
+    border-collapse: collapse;
+    border: 1px solid #999;
+}
+.invoice-table td{
+    border: 1px solid #999;
+    padding:5px;
 }
