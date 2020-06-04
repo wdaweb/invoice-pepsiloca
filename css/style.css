@@ -46,3 +46,16 @@
     border: 1px solid #999;
     padding:5px;
 }
+
+/* 沒效果 有點奇怪 */
+/* .btn{
+    border:1px solid rgb(171, 240, 255);
+    border-radius: 5px;
+
+    background: linear-gradient(90deg, rgba(182,129,235,1) 0%, rgba(162,255,247,1) 0%, rgba(0,255,248,1) 100%);
+
+} */
+
+/* .box{
+    box-shadow:2px 2px 5px #999;
+} */
