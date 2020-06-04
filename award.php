@@ -27,6 +27,10 @@ include_once "./com/base.php";
 <body>
 <?php include "./include/header.php";?>
 
+
+<div class="container">
+
+
 <?php
 
 if(empty($_GET)){
@@ -148,7 +152,7 @@ foreach ($invoices as $ins){
     
 
 ?>
-
+</div>
 
 </body>
 </html>

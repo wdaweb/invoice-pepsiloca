@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新增開獎獎號</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/custom.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <script src="plugins/jquery-3.5.1.min.js"></script>
+     <script src="plugins/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <?php include "./include/header.php";?>

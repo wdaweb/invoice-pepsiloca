@@ -28,12 +28,12 @@
   <div>
        期別:
         <select class="form-group col-12 col-md-6 mr-2 py-1" name="period">
-            <option value="1">1,2月</option>
-            <option value="2">3,4月</option>
-            <option value="3">5,6月</option>
-            <option value="4">7,8月</option>
-            <option value="5">9,10月</option>
-            <option value="6">11,12月</option>
+            <option value="1">1-2月</option>
+            <option value="2">3-4月</option>
+            <option value="3">5-6月</option>
+            <option value="4">7-8月</option>
+            <option value="5">9-10月</option>
+            <option value="6">11-12月</option>
         </select>
   </div>
   <div>

@@ -2,12 +2,12 @@
 $period=ceil(date("n")/2);
 
 $monthStr=[
-    '1'=>"1,2月",
-    '2'=>"3,4月",
-    '3'=>"5,6月",
-    '4'=>"7,8月",
-    '5'=>"9,10月",
-    '6'=>"11,12月",
+    '1'=>"1-2月",
+    '2'=>"3-4月",
+    '3'=>"5-6月",
+    '4'=>"7-8月",
+    '5'=>"9-10月",
+    '6'=>"11-12月",
 ];
 
 if(isset($_GET['period'])){
@@ -39,14 +39,16 @@ $year=date("Y");
 </head>
 <body>
 <?php include "./include/header.php";?>   
-<h1>期別</h1>
+
+<div class="container border border-light rounded-lg bg-dark text-light col-10 col-md-6 p-3 my-5">
+<h3 class="text-center pb-3">期別</h3>  
 <ul class="nav">
-<li><a href="invoice.php?period=1" style="background:<?=($period==1)?'lightgreen':'white';?>">1(1,2)</a></li>
-<li><a href="invoice.php?period=2" style="background:<?=($period==2)?'lightgreen':'white';?>">2(3,4)</a></li>
-<li><a href="invoice.php?period=3" style="background:<?=($period==3)?'lightgreen':'white';?>">3(5,6)</a></li>
-<li><a href="invoice.php?period=4" style="background:<?=($period==4)?'lightgreen':'white';?>">4(7,8)</a></li>
-<li><a href="invoice.php?period=5" style="background:<?=($period==5)?'lightgreen':'white';?>">5(9,10)</a></li>
-<li><a href="invoice.php?period=6" style="background:<?=($period==6)?'lightgreen':'white';?>">6(11,12)</a></li>
+<li><a href="invoice.php?period=1" style="background:<?=($period==1)?'lightgreen':'white';?>">第1期(1-2月)</a></li>
+<li><a href="invoice.php?period=2" style="background:<?=($period==2)?'lightgreen':'white';?>">第2期(3-4月)</a></li>
+<li><a href="invoice.php?period=3" style="background:<?=($period==3)?'lightgreen':'white';?>">第3期(5-6月)</a></li>
+<li><a href="invoice.php?period=4" style="background:<?=($period==4)?'lightgreen':'white';?>">第4期(7-8月)</a></li>
+<li><a href="invoice.php?period=5" style="background:<?=($period==5)?'lightgreen':'white';?>">第5期(9-10月)</a></li>
+<li><a href="invoice.php?period=6" style="background:<?=($period==6)?'lightgreen':'white';?>">第6期(11-12月)</a></li>
 </ul>
 <a href="add_invoice.php"><button>新增獎號</button></a>
 <?php
@@ -135,5 +137,6 @@ $num4=all('award_number',['period'=>$period,'year'=>$year,'type'=>4]);//多筆
         <td><a href="award.php?aw=9&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
     </tr>
 </table>
+            </div>
 </body>
 </html>

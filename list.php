@@ -34,15 +34,15 @@ if(isset($_GET['period'])){
 
 ?>
 
-
-<h1>發票列表</h1>
-<ul class="nav">
-<li><a href="list.php?period=1" style="background:<?=($period==1)?'pink':'white';?>">1(1,2)</a></li>
-<li><a href="list.php?period=2" style="background:<?=($period==2)?'pink':'white';?>">2(3,4)</a></li>
-<li><a href="list.php?period=3" style="background:<?=($period==3)?'pink':'white';?>">3(5,6)</a></li>
-<li><a href="list.php?period=4" style="background:<?=($period==4)?'pink':'white';?>">4(7,8)</a></li>
-<li><a href="list.php?period=5" style="background:<?=($period==5)?'pink':'white';?>">5(9,10)</a></li>
-<li><a href="list.php?period=6" style="background:<?=($period==6)?'pink':'white';?>">6(11,12)</a></li>
+<div class="container border border-light rounded-lg bg-dark text-light col-10 col-md-6 p-3 my-5">
+<h3 class="text-center pb-3">發票列表</h3>
+<ul class="nav bg-light " style="">
+<li><a href="list.php?period=1" style="background:<?=($period==1)?'pink':'white';?>">第1期(1/2月)</a></li>
+<li><a href="list.php?period=2" style="background:<?=($period==2)?'pink':'white';?>">第2期(3/4月)</a></li>
+<li><a href="list.php?period=3" style="background:<?=($period==3)?'pink':'white';?>">第3期(5/6月)</a></li>
+<li><a href="list.php?period=4" style="background:<?=($period==4)?'pink':'white';?>">第4期(7/8月)</a></li>
+<li><a href="list.php?period=5" style="background:<?=($period==5)?'pink':'white';?>">第5期(9/10月)</a></li>
+<li><a href="list.php?period=6" style="background:<?=($period==6)?'pink':'white';?>">第6期(11/12月)</a></li>
 </ul>
 
 
@@ -52,7 +52,7 @@ if(isset($_GET['period'])){
 $rows=all('invoice',['period'=>$period]);
 
 ?>
-<table>
+<table class="table-dark">
     <tr>
         <td>編號</td>
         <td>標記</td>
@@ -73,6 +73,6 @@ $rows=all('invoice',['period'=>$period]);
     ?>
 </table>
 
-
+</div>
 </body>
 </html>
