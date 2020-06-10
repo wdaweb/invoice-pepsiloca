@@ -28,13 +28,13 @@ include_once "./com/base.php";
 <?php include "./include/header.php";?>
 
 
-<div class="container">
+<div class="container rounded-lg bg-dark text-light col-10 col-md-6 p-3 my-5">
 
 
 <?php
 
 if(empty($_GET)){
-    echo "請選擇對獎的項目<a herf=''invoice.php>各期獎號</a>";
+    echo "請選擇對獎的項目<a href='invoice.php'>各期獎號</a>";
     exit();
 }
 
@@ -66,15 +66,16 @@ $award_nums=nums("award_number",[
     "period"=>$_GET['period'],
     "type"=>$award_type[$aw][1]
 ]);
-
 echo "獎號數量:" .$award_nums;
+
 $award_numbers=all("award_number",[
             "year"=>$_GET['year'],
             "period"=>$_GET['period'],
             "type"=>$award_type[$aw][1]
         ]) ;
+ echo "<h4>對獎獎號:</h4>";
 
- echo "<h4>對獎獎號</h4>";
+
 $t_num=[];
 foreach($award_numbers as $num){
     echo $num['number']."<br>";
@@ -100,7 +101,9 @@ foreach($award_numbers as $num){
 // print_r($award_numbers);
 // echo "</pre>";
 
-echo "<h4>該期發票號碼</h4>";
+echo "<h4>該期發票號碼:</h4>";
+
+
 
 $invoices=all("invoice",[
     "year"=>$_GET['year'],
@@ -123,8 +126,9 @@ foreach ($invoices as $ins){
         }
 
         if(mb_substr($ins['number'],$start,$len) == $target_num){
-            echo "<span style='color:red;font-size:20px'>".$ins['number']."中獎了</span>";
+            echo "<span  style='color:red;font-size:20px'>".$ins['number']."中獎了!</span>"; 
             echo "<br>";
+            // echo  "<i class="far fa-smile-wink"></i>"; 笑臉
         }
 
     }
@@ -152,6 +156,10 @@ foreach ($invoices as $ins){
     
 
 ?>
+
+
+
+
 </div>
 
 </body>

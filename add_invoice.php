@@ -17,7 +17,7 @@
 <body>
 <?php include "./include/header.php";?>
 <form action="save_number.php" method="post">
-<table class="invoice-table">
+<table class="container invoice-table my-5">
     <tr>
         <td>年月份</td>
         <td>
@@ -36,7 +36,7 @@
     </tr>
     <tr>
         <td>特別獎</td>
-        <td><input type="number" name="num1"></td>
+        <td><input type="number" name="num1"><br>同期統一發票收執聯8位數號碼與特別獎號碼相同者獎金1,000萬元</td>
     </tr>
     <tr>
         <td>特獎</td>
@@ -48,39 +48,41 @@
             <input type="number" name="num3[]"><br>
             <input type="number" name="num3[]"><br>
             <input type="number" name="num3[]"><br>
-            <input type="number" name="num3[]"><br>
+            <!-- <input type="number" name="num3[]"><br> -->
         </td>
     </tr>
     <tr>
         <td>二獎</td>
-        <td></td>
+        <td>同期統一發票收執聯末7 位數號碼與頭獎中獎號碼末7 位相同者各得獎金4萬元</td>
     </tr>
     <tr>
         <td>三獎</td>
-        <td></td>
+        <td>同期統一發票收執聯末6 位數號碼與頭獎中獎號碼末6 位相同者各得獎金1萬元</td>
     </tr>
     <tr>
         <td>四獎</td>
-        <td></td>
+        <td>同期統一發票收執聯末5 位數號碼與頭獎中獎號碼末5 位相同者各得獎金4千元</td>
     </tr>
     <tr>
         <td>五獎</td>
-        <td></td>
+        <td>同期統一發票收執聯末4 位數號碼與頭獎中獎號碼末4 位相同者各得獎金1千元</td>
     </tr>
     <tr>
         <td>六獎</td>
-        <td></td>
+        <td>同期統一發票收執聯末3 位數號碼與 頭獎中獎號碼末3 位相同者各得獎金2百元</td>
     </tr>
     <tr>
         <td>增開六獎</td>
         <td>
             <input type="number" name="num4[]"><br>
-            <input type="number" name="num4[]">
+            <!-- <input type="number" name="num4[]"> -->
         </td>
     </tr>
 </table>
+<div>
+<input class="btn btn-primary mx-auto" type="submit" value="送出">
 
-<input type="submit" value="送出">
+</div>
 
 </form>
 </body>
