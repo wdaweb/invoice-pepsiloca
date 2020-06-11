@@ -20,10 +20,11 @@
 
 </head>
 <body>
-    <?php include "./include/header.php";?>
+
+  <?php include "./include/header.php";?>
     
     <form action="save_invoice.php" method="post" class="my-5" >
-  <div class="container border border-light rounded-lg bg-dark text-light col-10 col-md-6 p-3">
+  <div class="container border border-light rounded-lg bg-dark text-light col-12 col-md-6 p-3">
   <h3 class="text-center pb-3">統一發票輸入</h3>  
   <div>
        期別:
@@ -46,13 +47,13 @@
   </div>
   <div >
         獎號:
-        <input class="form-group col-12 col-md-2 py-1" type="text" name="code" plasceholder="發票字母,例:AA">
-        <input class="form-group col-md-6 py-1" type="text" name="number" plasceholder="發票號碼">
-        <input class="btn btn-primary btm-sm" type="submit"  value="儲存">
+        <input class="form-group col-12 col-md-2 py-1" type="text" name="code" placeholder="AA">
+        <input class="form-group col-md-6 py-1" type="text" name="number" placeholder="數字8碼">
+        <!-- <input class="btn btn-primary btm-sm" type="submit"  value="儲存"> -->
   </div>
    <div>
         花費:
-        <input class="form-group col-12 col-md-5 py-1" type="number" name="expend">
+        <input class="form-group col-12 col-md-5 py-1" type="number" name="expend" placeholder="金額">
         <input class="btn btn-primary btm-sm" type="submit" value="儲存">
 </div>
 </div>

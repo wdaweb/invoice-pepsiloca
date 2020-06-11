@@ -2,7 +2,7 @@
 
 include_once "com/base.php";
 
-$num=30;
+$num=10;
 $char=["A","C","D","F","G","X","Z","Y","R","S","U","J"];
 
 for($i=0;$i<$num;$i++){

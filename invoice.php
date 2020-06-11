@@ -47,6 +47,7 @@ $year=date("Y");
             <h3 class="text-left pb-3">期別</h3>
             <a href="add_invoice.php"><button class="btn btn-primary ml-5">新增獎號</button></a>
         </div>
+        <div class="inline-block">
         <ul class="nav">
             <li><a href="invoice.php?period=1" style="background:<?=($period==1)?>">第1期(1-2月)</a></li>
             <li><a href="invoice.php?period=2" style="color:white background:<?=($period==2)?>">第2期(3-4月)</a></li>
@@ -55,6 +56,7 @@ $year=date("Y");
             <li><a href="invoice.php?period=5" style="background:<?=($period==5)?>">第5期(9-10月)</a></li>
             <li><a href="invoice.php?period=6" style="background:<?=($period==6)?>">第6期(11-12月)</a></li>
         </ul>
+        </div>
         <?php
 
 $num1=find('award_number',['period'=>$period,'year'=>$year,'type'=>1]); //單筆

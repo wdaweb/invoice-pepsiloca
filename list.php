@@ -54,8 +54,8 @@ $rows=all('invoice',['period'=>$period]);
 ?>
 <table class="table table-sm mt-2 ">
     <tr>
-        <td>編號</td>
-        <td>標記</td>
+        <td>年份</td>
+        <td>期別</td>
         <td>號碼</td>
         <td>花費</td>
     </tr>
@@ -63,10 +63,11 @@ $rows=all('invoice',['period'=>$period]);
     foreach($rows as $row){
     ?>
     <tr>
-        <td><?=$row['id'];?></td>
-        <td><?=$row['code'];?></td>
-        <td><?=$row['number'];?></td>
-        <td><?=$row['expend'];?></td>
+
+        <td><?=$row['year'];?></td>
+        <td><?=$row['period'];?></td>
+        <td><?=$row['code']."-".$row['number'];?></td>
+        <td><?=$row['expend']."元";?></td>
     </tr>
     <?php
     }
