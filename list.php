@@ -34,9 +34,10 @@ if(isset($_GET['period'])){
 
 ?>
 
-<div class="container border border-light rounded-lg bg-dark text-light col-10 col-md-6 p-3 my-5">
+<div class="container text-light col-10 col-md-6 p-3 my-5">
 <h3 class="text-center pb-3">發票列表</h3>
-<ul class="nav">
+<hr>
+<ul class="nav mb-3">
 <li><a href="list.php?period=1" style="background:<?=($period==1)?>">第1期(1/2月)</a></li>
 <li><a href="list.php?period=2" style="background:<?=($period==2)?>">第2期(3/4月)</a></li>
 <li><a href="list.php?period=3" style="background:<?=($period==3)?>">第3期(5/6月)</a></li>
@@ -51,6 +52,7 @@ if(isset($_GET['period'])){
 //$sql="select * from invoice where period='$period'";
 $rows=all('invoice',['period'=>$period]);
 
+
 ?>
 <table class="table table-sm mt-2 ">
     <tr>
@@ -61,11 +63,12 @@ $rows=all('invoice',['period'=>$period]);
     </tr>
     <?php
     foreach($rows as $row){
+        $p=$row['period'];
     ?>
     <tr>
 
         <td><?=$row['year'];?></td>
-        <td><?=$row['period'];?></td>
+        <td>第<?=$p;?>期(<?=(2*$p-1)."/".(2*$p) ?>月)</td>
         <td><?=$row['code']."-".$row['number'];?></td>
         <td><?=$row['expend']."元";?></td>
     </tr>

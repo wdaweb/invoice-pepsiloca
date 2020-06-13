@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-dark bg-dark text-dark">
+<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-dark text-dark bg-dark">
 
 
 <!-- 畫面縮小時要改成漢堡選單 -->
@@ -19,8 +19,8 @@
 
 
 
-<div class="container">
-  <div class="collapse navbar-collapse" id="navbarText">
+
+  <div class="collapse navbar-collapse h4 text-center" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="index.php">回首頁</a>
@@ -35,7 +35,7 @@
         <a class="nav-link" href="award.php">對獎</a>
       </li> -->
     </ul>
- </div>
+
  </div>
 </nav>
 

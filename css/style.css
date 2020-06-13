@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Sans TC','Balsamiq Sans', cursive, sans-serif;
 }
 
 
@@ -24,25 +24,34 @@
 }
 .header ul li a{
     text-decoration:none; 
+
 }
 
 .nav{
     list-style-type: none; 
     text-align:center;
-    font-size: 12px;   
+    font-size: 14px;   
+    color:yellow;
 }
 .nav li{
     display: inline-block;
-    padding:5px;
+    padding:8px;
     margin:auto;
-    border:1px solid #ccc;
+    border:1px solid rgb(100, 100, 100);
+    background: #C9CCD3;
+    background-color: #E4E4E1;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
     border-radius:3px;
     width:120px;
+    box-shadow:1px 1px 3px rgb(73, 73, 73);
 
 }
 
 .nav li a{
     text-decoration:none;
+    color:rgb(255, 248, 151);
+
 }
 
 .upnav{
@@ -51,8 +60,9 @@
 
 .invoice-table{
     border-collapse: collapse;
-    border: 2px solid #999;
     text-align: center;
+    box-shadow: 1px 1px gray;
+    /* background-color: aqua; */
 }
 
 .invoice-table td{
@@ -82,9 +92,19 @@
 } */
 
 .container{
-    border-radius: 10px;
+    /* background-image: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
+    box-shadow:3px 3px 10px #d3d3d3;
+    border-radius: 30px;
+    border:3px solid #7a7a7a;
+}
+
+
 
 }
+
+
 
 .addsant{
     margin:auto;
@@ -98,10 +118,20 @@
 
 .font{
     font-size: 25px;
+    
+
 }
 
 .fonta{
     font-size:12px;
+
+}
+
+.wa{
+    width:100px;
+    color:rgb(218, 253, 255);
+    background: rgb(5, 217, 255);
+    border-radius: 5px;
 }
 
 .table-dark{
@@ -118,4 +148,8 @@
 
 .a{
     color:white;
+}
+
+.h3{
+    text-shadow:1px 1px 3px rgb(81, 118, 218);
 }

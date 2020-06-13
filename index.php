@@ -21,11 +21,12 @@
 </head>
 <body>
 
-  <?php include "./include/header.php";?>
     
-    <form action="save_invoice.php" method="post" class="my-5" >
-  <div class="container border border-light rounded-lg bg-dark text-light col-12 col-md-6 p-3">
-  <h3 class="text-center pb-3">統一發票輸入</h3>  
+    <?php include "./include/header.php";?>
+    <div class="container text-center text-light col-12 col-md-6 p-3 my-5">
+        <h3 class=" pb-3">統一發票輸入</h3>  
+        <hr>
+        <form action="save_invoice.php" method="post" class="my-5" >
   <div>
        期別:
         <select class="form-group col-12 col-md-6 mr-2 py-1" name="period">
@@ -54,8 +55,8 @@
    <div>
         花費:
         <input class="form-group col-12 col-md-5 py-1" type="number" name="expend" placeholder="金額">
-        <input class="btn btn-primary btm-sm" type="submit" value="儲存">
-</div>
+    </div>
+    <input class="btn btn-primary btm-sm" type="submit" value="儲存">
 </div>
     </form>
 </body>

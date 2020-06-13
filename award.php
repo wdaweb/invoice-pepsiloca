@@ -15,7 +15,7 @@ include_once "./com/base.php";
   <link rel="stylesheet" href="plugins/custom.css">
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Open+Sans&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap" rel="stylesheet">
 
   <script src="plugins/jquery-3.5.1.min.js"></script>
   <script src="plugins/bootstrap.bundle.min.js"></script>
@@ -25,10 +25,12 @@ include_once "./com/base.php";
 
 </head>
 <body>
-<?php include "./include/header.php";?>
-
-
-<div class="container rounded-lg bg-dark text-light col-10 col-md-6 p-3 my-5">
+    
+    <?php include "./include/header.php";?>
+    
+    <div class="container text-light text-center col-10 col-md-6 p-3 my-5">
+    <h3 class="pb-3">兌獎結果</h3>
+    <hr>
 
 
 <?php
@@ -43,21 +45,22 @@ if(empty($_GET)){
 <?php
 
 $award_type=[
-    1=>["特別獎",1,8],  //對8碼
-    2=>["特獎",2,8],
-    3=>["頭獎",3,8],
-    4=>["二獎",3,7],
-    5=>["三獎",3,6],
-    6=>["四獎",3,5],
-    7=>["五獎",3,4],
-    8=>["六獎",3,3],
-    9=>["增開六獎",4,3],
+    1=>["特別獎",1,8,10000000],  //對8碼 
+    2=>["特獎",2,8,2000000],
+    3=>["頭獎",3,8,100000],
+    4=>["二獎",3,7,40000],
+    5=>["三獎",3,6,10000],
+    6=>["四獎",3,5,4000],
+    7=>["五獎",3,4,1000],
+    8=>["六獎",3,3,200],
+    9=>["增開六獎",4,3,200],
 ];
 
 
 $aw=$_GET['aw'];
-echo "獎別:". $award_type[$aw] [0]. "<br>";
+
 echo "年份:".$_GET['year']."<br>";
+echo "獎別:". $award_type[$aw] [0]. "<br>";
 echo "期別:".$_GET['period']."<br>";
 
 
@@ -73,7 +76,7 @@ $award_numbers=all("award_number",[
             "period"=>$_GET['period'],
             "type"=>$award_type[$aw][1]
         ]) ;
- echo "<h4>對獎獎號:</h4>";
+ echo "<h5 style='color:yellow'>本期對獎獎號:</h5>";
 
 
 $t_num=[];
@@ -101,8 +104,10 @@ foreach($award_numbers as $num){
 // print_r($award_numbers);
 // echo "</pre>";
 
-echo "<h4>該期發票號碼:</h4>";
+echo "<h5 style='color:yellow'>本期發票號碼:</h5>";
 
+
+$count=0;
 
 
 $invoices=all("invoice",[
@@ -126,14 +131,23 @@ foreach ($invoices as $ins){
         }
 
         if(mb_substr($ins['number'],$start,$len) == $target_num){
-            echo "<span  style='color:red;font-size:20px'>".$ins['number']."中獎了!</span>"; 
+            echo "<span  style='color:red;font-size:20px'> ".$ins['number']."中獎了!</span>". "<br>"; 
+            $count++;
             echo "<br>";
-            // echo  "<i class="far fa-smile-wink"></i>"; 笑臉
+        }else{
+            echo "沒中獎";
         }
-
     }
 }
 
+$money=$award_type[$aw][3]; //中獎單筆金額
+$total = $count*$money; //中獎總金額
+
+
+
+
+
+// <i class="far fa-grin-stars"></i>
 
 
 //複數多筆
@@ -153,10 +167,21 @@ foreach ($invoices as $ins){
 //     }
     
 // } 
+
+//php生成html寫法
+// echo "<p>總筆數:".$count."</p>";
+// echo "<p>總金額:".$total."</p>";
     
 
 ?>
 
+<hr>
+<!-- 
+//html的寫法 -->
+<div style="inline-block">
+<p>總中獎筆數:<?=$count;?>筆</p>
+<p>總中獎金額:<?=$total;?>元</p>
+</div>
 
 
 

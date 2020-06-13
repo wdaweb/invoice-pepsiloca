@@ -16,8 +16,11 @@
 </head>
 <body>
 <?php include "./include/header.php";?>
-<form action="save_number.php" method="post">
-<table class="container invoice-table my-5">
+<div class="addbox container text-center text-light col-10 col-md-6 p-3 my-5 ">
+<h3 class="text-center pb-3">中獎號碼輸入</h3>
+<hr>
+<form  action="save_number.php" method="post">
+<table class="invoice-table text-light my-3 ">
     <tr>
         <td>年月份</td>
         <td>
@@ -79,11 +82,10 @@
         </td>
     </tr>
 </table>
-<div>
-<input class="btn btn-primary mx-auto" type="submit" value="送出">
+
+<input class="btn btn-primary margin-auto align-center" type="submit" value="送出">
 
 </div>
-
 </form>
 </body>
 </html>
