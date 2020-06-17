@@ -15,17 +15,17 @@
      <script src="plugins/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<?php include "./include/header.php";?>
-<div class="addbox container text-center text-light col-10 col-md-6 p-3 my-5 ">
-<h3 class="text-center pb-3">中獎號碼輸入</h3>
-<hr>
+    <div class="container justify-content-center text-center text-light col-10 col-md-6 p-3 my-5 ">
+        <h3 class="text-center pb-3">中獎號碼輸入</h3>
+        <?php include "./include/header.php";?>
+<div class="d-flex justify-content-center">
 <form  action="save_number.php" method="post">
 <table class="invoice-table text-light my-3 ">
     <tr>
         <td>年月份</td>
         <td>
-            <input type="number" name="year" id="">
-            <select name="period">
+            <input style="width:35%" type="number" name="year" id="" placeholder="請輸入西元年">
+            <select style="width:20%"name="period">
                 <option value="1">1,2月</option>
                 <option value="2">3,4月</option>
                 <option value="3">5,6月</option>
@@ -39,18 +39,18 @@
     </tr>
     <tr>
         <td>特別獎</td>
-        <td><input type="number" name="num1"><br>同期統一發票收執聯8位數號碼與特別獎號碼相同者獎金1,000萬元</td>
+        <td><input style="width:55%" type="number" name="num1" placeholder="請輸入8位數號碼"><br>同期統一發票收執聯8位數號碼與特別獎號碼相同者獎金1,000萬元</td>
     </tr>
     <tr>
         <td>特獎</td>
-        <td><input type="number" name="num2"></td>
+        <td><input style="width:55%" type="number" name="num2" placeholder="請輸入8位數號碼"></td>
     </tr>
     <tr>
         <td>頭獎</td>
         <td>
-            <input type="number" name="num3[]"><br>
-            <input type="number" name="num3[]"><br>
-            <input type="number" name="num3[]"><br>
+            <input style="width:55%" type="number" name="num3[]" placeholder="請輸入8位數號碼"><br>
+            <input style="width:55%" type="number" name="num3[]" placeholder="請輸入8位數號碼"><br>
+            <input style="width:55%" type="number" name="num3[]" placeholder="請輸入8位數號碼"><br>
             <!-- <input type="number" name="num3[]"><br> -->
         </td>
     </tr>
@@ -77,14 +77,16 @@
     <tr>
         <td>增開六獎</td>
         <td>
-            <input type="number" name="num4[]"><br>
+            <input style="width:55%" type="number" name="num4[]" placeholder="請輸入8位數號碼"><br>
             <!-- <input type="number" name="num4[]"> -->
         </td>
     </tr>
 </table>
 
 <input class="btn btn-primary margin-auto align-center" type="submit" value="送出">
+<input class="btn btn-primary margin-auto align-center" type="reset" value="重置">
 
+</div>
 </div>
 </form>
 </body>

@@ -26,11 +26,10 @@ include_once "./com/base.php";
 </head>
 <body>
     
-    <?php include "./include/header.php";?>
     
     <div class="container text-light text-center col-10 col-md-6 p-3 my-5">
-    <h3 class="pb-3">兌獎結果</h3>
-    <hr>
+        <h3 class="pb-3">兌獎結果</h3>
+        <?php include "./include/header.php";?>
 
 
 <?php
@@ -104,7 +103,7 @@ foreach($award_numbers as $num){
 // print_r($award_numbers);
 // echo "</pre>";
 
-echo "<h5 style='color:yellow'>本期發票號碼:</h5>";
+echo "<h5 style='color:yellow'>本期我的中獎發票號碼:</h5>";
 
 
 $count=0;
@@ -131,12 +130,11 @@ foreach ($invoices as $ins){
         }
 
         if(mb_substr($ins['number'],$start,$len) == $target_num){
-            echo "<span  style='color:red;font-size:20px'> ".$ins['number']."中獎了!</span>". "<br>"; 
+            echo "<span  style='color:pink;font-size:20px'>".$ins['number']."中獎了!</span>"."<i class='far fa-grin-stars' style='color:pink'></i>". "<br>"; 
             $count++;
             echo "<br>";
-        }else{
-            echo "沒中獎";
         }
+        
     }
 }
 

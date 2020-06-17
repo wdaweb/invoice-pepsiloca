@@ -40,17 +40,16 @@ $year=date("Y");
 </head>
 
 <body>
-    <?php include "./include/header.php";?>
-
-    <div class="container text-center text-light col-10 col-md-6 p-3 my-5 upnav">
+    
+    <div class="container text-center text-light col-10 col-md-6 p-3 my-5">
         <div class="d-flex justify-content-center">
-            <h3 class="pb-3">期別</h3>
-            <hr>
+            <h3 class="pb-3">中獎號碼</h3>
         </div>
-        <div class="inline-block justify-content-center">
+        <?php include "./include/header.php";?>
+        <div class="inline-block justify-content-center m-3">
             <ul class="nav">
                 <li><a href="invoice.php?period=1" style="background:<?=($period==1)?>">第1期(1-2月)</a></li>
-                <li><a href="invoice.php?period=2" style="color:white background:<?=($period==2)?>">第2期(3-4月)</a></li>
+                <li><a href="invoice.php?period=2" style="background:<?=($period==2)?>">第2期(3-4月)</a></li>
                 <li><a href="invoice.php?period=3" style="background:<?=($period==3)?>">第3期(5-6月)</a></li>
                 <li><a href="invoice.php?period=4" style="background:<?=($period==4)?>">第4期(7-8月)</a></li>
                 <li><a href="invoice.php?period=5" style="background:<?=($period==5)?>">第5期(9-10月)</a></li>
@@ -75,7 +74,7 @@ $num4=all('award_number',['period'=>$period,'year'=>$year,'type'=>4]);//多筆
     </tr>
     <tr>
         <td>特別獎</td>
-        <td class="font"><?php
+        <td class="fontb"><?php
         if(!empty($num1['number'])){
             echo $num1['number'];
         };
@@ -85,7 +84,7 @@ $num4=all('award_number',['period'=>$period,'year'=>$year,'type'=>4]);//多筆
             </tr>
             <tr>
                 <td>特獎</td>
-                <td class="font"><?php
+                <td class="fontb"><?php
         if(!empty($num2['number'])){
             echo $num2['number'];
         };
@@ -95,7 +94,7 @@ $num4=all('award_number',['period'=>$period,'year'=>$year,'type'=>4]);//多筆
             </tr>
             <tr>
                 <td>頭獎</td>
-                <td class="font">
+                <td class="fontb">
                     <?php
                 foreach($num3 as $num){
                     echo $num['number'] . "<br>";
@@ -133,7 +132,7 @@ $num4=all('award_number',['period'=>$period,'year'=>$year,'type'=>4]);//多筆
             </tr>
             <tr>
                 <td>增開六獎</td>
-                <td class="font">
+                <td class="fontb">
                     <?php
                         foreach($num4 as $num){
                             echo $num['number'] . "<br>";
@@ -144,7 +143,7 @@ $num4=all('award_number',['period'=>$period,'year'=>$year,'type'=>4]);//多筆
                 <td><a class="wa" href="award.php?aw=9&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
             </tr>
         </table>
-        <a href="add_invoice.php"><button class="btn btn-primary ml-5">新增獎號</button></a>
+        <a href="add_invoice.php"><button class="btn btn-primary ml-2">新增中獎號碼</button></a>
     </div>
 </body>
 
