@@ -28,7 +28,7 @@ include_once "./com/base.php";
     
     
     <div class="container text-light text-center col-10 col-md-6 p-3 my-5">
-        <h3 class="pb-3">兌獎結果</h3>
+        <!-- <h3 class="pb-3">兌獎結果</h3> -->
         <?php include "./include/header.php";?>
 
 
@@ -85,24 +85,6 @@ foreach($award_numbers as $num){
 }
 
 
-// if($award_nums>1){
-//     $award_numbers=all("award_number",[
-//         "year"=>$_GET['year'],
-//         "period"=>$_GET['period'],
-//         "type"=>$award_type[$_GET['aw']][1]
-//     ]) ;
-// }else{
-//     $award_numbers=find("award_number",[
-//         "year"=>$_GET['year'],
-//         "period"=>$_GET['period'],
-//         "type"=>$award_type[$_GET['aw']][1]
-//     ]) ;
-// }
-
-// echo "<pre>";
-// print_r($award_numbers);
-// echo "</pre>";
-
 echo "<h5 style='color:yellow'>本期我的中獎發票號碼:</h5>";
 
 
@@ -142,34 +124,6 @@ $money=$award_type[$aw][3]; //中獎單筆金額
 $total = $count*$money; //中獎總金額
 
 
-
-
-
-// <i class="far fa-grin-stars"></i>
-
-
-//複數多筆
-// $invoices=all("invoice",[
-//     "year"=>$_GET['year'],
-//     "period"=>$_GET['period'],]);
-
-// foreach ($invoice as $ins){
-
-//     foreach($t_num as $tn){
-//         if($ins['number']== $tn){
-            
-//         }else{
-//             echo $ins['number']."沒中獎";
-//         }
-//         echo "<br>";
-//     }
-    
-// } 
-
-//php生成html寫法
-// echo "<p>總筆數:".$count."</p>";
-// echo "<p>總金額:".$total."</p>";
-    
 
 ?>
 

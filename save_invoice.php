@@ -1,26 +1,22 @@
+<link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/custom.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap" rel="stylesheet">
 
+  <script src="plugins/jquery-3.5.1.min.js"></script>
+  <script src="plugins/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/d788500399.js" crossorigin="anonymous"></script>
 
 <?php
 include "./com/base.php";
 
-
-
-/* $sql="insert into invoice (
-    `period`,
-    `year`,
-    `code`,
-    `number`,
-    `expend`) values(
-    '".$_POST['period']."',
-    '".$_POST['year']."',
-    '".$_POST['code']."',
-    '".$_POST['number']."',
-    '".$_POST['expend']."')";
-    echo $sql;
-    $res=$pdo->exec($sql); */
     ?>
 
-<div class="container text-light col-10 col-md-6 p-3 my-5">
+<div class="container text-center text-light col-10 col-md-6 p-3 my-5">
+
+
     <?php
     $data=[
         'period'=>$_POST['period'],
@@ -31,15 +27,17 @@ include "./com/base.php";
     ];
     $res=save("invoice",$data);
     if($res==1){
-        echo "新增成功<br>";
-        echo "<a class='nbtn' href='index.php'>繼續輸入</a><br>";
-
-        echo "<a class='nbtn' href='list.php'>發票列表</a>";
+        echo "<h5>"."我的發票新增成功!"."</h5>"."<br>";
     }else{
         echo "新增失敗";
 
     }
-
-
-?>
-</div>
+ 
+    ?>
+    <table>
+        <tr>   
+        <a class="btn btn-primary m-2" href="index.php" role="button">繼續輸入</a>
+        <a class="btn btn-primary m-2" href="list.php" role="button">發票列表</a>
+        </tr>
+    </table>
+    </div>

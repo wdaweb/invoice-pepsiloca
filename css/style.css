@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans TC','Balsamiq Sans', cursive, sans-serif;
+    font-family: 'Noto Sans TC','Balsamiq Sans','微軟正黑體', cursive, sans-serif;
 }
 
 
@@ -33,6 +33,7 @@
     font-size: 14px;   
     color:yellow;
 }
+
 .nav li{
     display: inline-block;
     padding:8px;
@@ -51,12 +52,22 @@
 .nav li a{
     text-decoration:none;
     color:rgb(255, 248, 151);
+    
+}
+
+.nav li a:focus{
+    background-color: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)!important;
+    color:#ff98d4;
+    box-shadow: aliceblue;
+}
+
+
+.nav-h{
+    display: inline-block;
+    width: 100%;
 
 }
 
-.upnav{
-    background-color: #7952b3;
-}
 
 .invoice-table{
     border-collapse: collapse;
@@ -70,18 +81,7 @@
     padding:5px;    
 }
 
-/* 沒效果 有點奇怪 */
-/* .btn{
-    border:1px solid rgb(171, 240, 255);
-    border-radius: 5px;
 
-    background: linear-gradient(90deg, rgba(182,129,235,1) 0%, rgba(162,255,247,1) 0%, rgba(0,255,248,1) 100%);
-
-} */
-
-/* .box{
-    box-shadow:2px 2px 5px #999;
-} */
 
 .table tr{
     background-color: #fff;
@@ -101,11 +101,6 @@
 }
 
 
-
-}
-
-
-
 .addsant{
     margin:auto;
 
@@ -118,13 +113,16 @@
 
 .font{
     font-size: 25px;
-    
 
 }
 
 .fonta{
-    font-size:12px;
+    font-size:16px;
+}
 
+.fontb{
+    font-size:25px;
+    color:red;
 }
 
 .wa{
@@ -144,6 +142,20 @@
 .table{
     text-align: center;
 
+    
+}
+
+.tt{
+    border-radius: 3px;
+    height:30px;
+    overflow-y:auto;
+    text-align: center;
+
+}
+
+.tt:hover :nth-child(n) {
+    color: #ff4bb4;
+
 }
 
 .a{
@@ -152,4 +164,14 @@
 
 .h3{
     text-shadow:1px 1px 3px rgb(81, 118, 218);
+}
+
+.nbtn{
+    background-color: rgb(2, 110, 250);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
 }

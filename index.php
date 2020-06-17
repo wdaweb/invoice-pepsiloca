@@ -49,12 +49,12 @@
             <div >
                     獎號:
                     <input class="form-group col-12 col-md-2 py-1" type="text" name="code" placeholder="AA">
-                    <input class="form-group col-md-6 py-1" type="text" name="number" placeholder="數字8碼">
+                    <input class="form-group col-md-4 py-1" type="text" name="number" placeholder="數字8碼">
                     <!-- <input class="btn btn-primary btm-sm" type="submit"  value="儲存"> -->
             </div>
             <div>
                     花費:
-                    <input class="form-group col-12 col-md-5 py-1" type="number" name="expend" placeholder="金額">
+                    <input class="form-group col-12 col-md-6 py-1" type="number" name="expend" placeholder="金額">
                 </div>
                 <input class="btn btn-primary btm-sm" type="submit" value="儲存">
             </div>

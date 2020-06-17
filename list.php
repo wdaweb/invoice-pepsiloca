@@ -56,11 +56,12 @@ $rows=all('invoice',['period'=>$period]);
 ?>
 <table class=" table table-sm mt-2 ">
     <tr style="color:blue">
-        <td style="width:25px">年份</td>
+        <td>年份</td>
         <td>期別</td>
         <td>號碼</td>
         <td>花費</td>
         <td>操作</td>
+        <td></td>
   
     </tr>
     <?php
@@ -74,9 +75,9 @@ $rows=all('invoice',['period'=>$period]);
         <td>第<?=$p;?>期(<?=(2*$p-1)."/".(2*$p) ?>月)</td>
         <td><?=$row['code']."-".$row['number'];?></td>
         <td><?=$row['expend']."元";?></td>
-        <td>            
-            <a href="edit_invoice.php?id=<?=$row['id'];?>&period=<?=$p;?>">編輯</a>
-            <a href="del_invoice.php?id=<?=$row['id'];?>&period=<?=$p;?>">刪除</a>
+        <td>          
+        <a class="btn btn-primary btn-sm" href="edit_invoice.php?id=<?=$row['id'];?>&period=<?=$p;?>" role="button">編輯</a>  
+        <a class="btn btn-primary btn-sm" href="del_invoice.php?id=<?=$row['id'];?>&period=<?=$p;?>" role="button">刪除</a>  
         <td>
     </tr>
     <?php

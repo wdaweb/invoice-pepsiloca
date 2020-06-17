@@ -143,7 +143,7 @@ $num4=all('award_number',['period'=>$period,'year'=>$year,'type'=>4]);//多筆
                 <td><a class="wa" href="award.php?aw=9&year=<?=$year;?>&period=<?=$period;?>">對獎</a></td>
             </tr>
         </table>
-        <a href="add_invoice.php"><button class="btn btn-primary ml-2">新增中獎號碼</button></a>
+        <!-- <a href="add_invoice.php"><button class="btn btn-primary ml-2">新增中獎號碼</button></a> -->
     </div>
 </body>
 
