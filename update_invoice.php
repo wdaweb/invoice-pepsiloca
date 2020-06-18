@@ -3,7 +3,7 @@
     include "./com/base.php";
 ?>
 
-<div class="container text-center text-light col-10 col-md-6 p-3 my-5">
+
 <?php
     $data=[
         'id'=>$_POST['id'],
@@ -23,5 +23,3 @@
     }
     
 ?>
-</div>
-

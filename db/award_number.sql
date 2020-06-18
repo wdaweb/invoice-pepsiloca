@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- 主機： localhost
--- 產生時間： 2020 年 06 月 04 日 15:15
--- 伺服器版本： 5.5.64-MariaDB
--- PHP 版本： 7.3.14
+-- Host: 127.0.0.1
+-- Generation Time: Jun 18, 2020 at 02:35 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 資料庫： `s1090206`
+-- Database: `invoice`
 --
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `award_number`
+-- Table structure for table `award_number`
 --
 
 CREATE TABLE `award_number` (
@@ -37,38 +37,42 @@ CREATE TABLE `award_number` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 傾印資料表的資料 `award_number`
+-- Dumping data for table `award_number`
 --
 
 INSERT INTO `award_number` (`id`, `year`, `period`, `number`, `type`) VALUES
-(1, 2020, 1, '11111111', 1),
-(2, 2020, 1, '22222222', 2),
-(3, 2020, 1, '45454455', 3),
-(4, 2020, 1, '36363636', 3),
-(5, 2020, 1, '45454454', 3),
-(6, 2020, 1, '0', 3),
-(7, 2020, 1, '333', 4),
-(8, 2020, 1, '444', 4);
+(37, 2020, 2, '91911374', 1),
+(38, 2020, 2, '08501338', 2),
+(39, 2020, 2, '57161318', 3),
+(40, 2020, 2, '23570653', 3),
+(41, 2020, 2, '47332279', 3),
+(42, 2020, 2, '519', 4),
+(43, 2020, 1, '12620024', 1),
+(44, 2020, 1, '39793895', 2),
+(45, 2020, 1, '67913945', 3),
+(46, 2020, 1, '09954061', 3),
+(47, 2020, 1, '54574947', 3),
+(48, 2020, 1, '007', 4);
 
 --
--- 已傾印資料表的索引
+-- Indexes for dumped tables
 --
 
 --
--- 資料表索引 `award_number`
+-- Indexes for table `award_number`
 --
 ALTER TABLE `award_number`
   ADD PRIMARY KEY (`id`);
 
 --
--- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `award_number`
+-- AUTO_INCREMENT for table `award_number`
 --
 ALTER TABLE `award_number`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '流水號', AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '流水號', AUTO_INCREMENT=49;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
