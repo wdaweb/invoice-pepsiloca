@@ -32,26 +32,26 @@
         $res=find("invoice",$id);        
         
         ?>
-        <h3 class=" pb-3">編輯我的發票</h3>
+        <h3 class=" pb-3 m-3">編輯我的發票</h3>
 
-        <form action="update_invoice.php" method="post" class="my-5">
+        <form action="update_invoice.php" method="post" class="my-3">
                 <input type="hidden" name="id" value="<?=$id;?>">
             <div>
                 年份:
-                <input class="form-group col-12 col-md-2 py-1" type="text" name="year" value="<?=$res['year'];?>">
+                <input class="form-group  col-12 col-md-5 py-1" type="text" name="year" value="<?=$res['year'];?>">
 
 
             </div>
             <div>
                 期別:
-                <input class="form-group col-12 col-md-2 py-1" type="text" name="period" value="<?=$res['period'];?>">
+                <input class="form-group  col-12 col-md-5 py-1" type="text" name="period" value="<?=$res['period'];?>">
 
 
             </div>
             <div>
                 獎號:
-                <input class="form-group col-12 col-md-2 py-1" type="text" name="code" value="<?=$res['code'];?>">
-                <input class="form-group col-md-6 py-1" type="text" name="number" value="<?=$res['number'];?>">
+                <input class="form-group col-3 col-md-2 py-1" type="text" name="code" value="<?=$res['code'];?>">
+                <input class="form-group col-md-3 py-1" type="text" name="number" value="<?=$res['number'];?>">
 
             </div>
             <div>

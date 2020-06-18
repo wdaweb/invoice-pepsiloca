@@ -54,14 +54,13 @@ $rows=all('invoice',['period'=>$period]);
 
 
 ?>
-<table class=" table table-sm mt-2 ">
-    <tr style="color:blue">
+<table class="table table-sm mt-2">
+    <tr style="color:gray">
         <td>年份</td>
         <td>期別</td>
         <td>號碼</td>
         <td>花費</td>
         <td>操作</td>
-        <td></td>
   
     </tr>
     <?php
@@ -70,15 +69,15 @@ $rows=all('invoice',['period'=>$period]);
         // echo "<a href='del_invoice.php?user=".$row['id']."'><button>刪除</button></a>";
     ?>
     <tr class="tt">
-
-        <td><?=$row['year'];?></td>
-        <td>第<?=$p;?>期(<?=(2*$p-1)."/".(2*$p) ?>月)</td>
-        <td><?=$row['code']."-".$row['number'];?></td>
-        <td><?=$row['expend']."元";?></td>
+        
+        <td class="hov"><?=$row['year'];?></td>
+        <td class="hov">第<?=$p;?>期(<?=(2*$p-1)."/".(2*$p) ?>月)</td>
+        <td class="hov"><?=$row['code']."-".$row['number'];?></td>
+        <td class="hov"><?=$row['expend']."元";?></td>
         <td>          
         <a class="btn btn-primary btn-sm" href="edit_invoice.php?id=<?=$row['id'];?>&period=<?=$p;?>" role="button">編輯</a>  
         <a class="btn btn-primary btn-sm" href="del_invoice.php?id=<?=$row['id'];?>&period=<?=$p;?>" role="button">刪除</a>  
-        <td>
+        </td>
     </tr>
     <?php
     }

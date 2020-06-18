@@ -46,7 +46,7 @@ $year=date("Y");
             <h3 class="pb-3">中獎號碼</h3>
         </div>
         <?php include "./include/header.php";?>
-        <div class="inline-block justify-content-center m-3">
+        <div class="d-flex inline-block justify-content-center m-3">
             <ul class="nav">
                 <li><a href="invoice.php?period=1" style="background:<?=($period==1)?>">第1期(1-2月)</a></li>
                 <li><a href="invoice.php?period=2" style="background:<?=($period==2)?>">第2期(3-4月)</a></li>

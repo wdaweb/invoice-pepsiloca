@@ -1,5 +1,10 @@
+
 <?php
     include "./com/base.php";
+?>
+
+<div class="container text-center text-light col-10 col-md-6 p-3 my-5">
+<?php
     $data=[
         'id'=>$_POST['id'],
         'period'=>$_POST['period'],
@@ -13,9 +18,10 @@
     if($res>0){
         to("list.php");
     }else{
-        echo "修改失敗";
+        echo "修改未完成";
 
     }
-
-
+    
 ?>
+</div>
+
