@@ -53,8 +53,8 @@
                     <!-- <input class="btn btn-primary btm-sm" type="submit"  value="儲存"> -->
             </div>
             <div>
-                    花費:
-                    <input class="form-group col-12 col-md-6 py-1" type="number" name="expend" placeholder="金額">
+                花費:
+                <input class="form-group col-12 col-md-6 py-1" type="number" name="expend" placeholder="金額">
                 </div>
                 <input class="btn btn-primary btm-sm" type="submit" value="儲存">
             </div>
