@@ -43,7 +43,7 @@
     </tr>
     <tr>
         <td>特獎</td>
-        <td><input style="width:55%" type="number" name="num2" placeholder="請輸入8位數號碼"></td>
+        <td><input style="width:55%" type="number" name="num2" placeholder="請輸入8位數號碼"><br>同期統一發票收執聯8位數號碼與特別獎號碼相同者獎金200萬元</td>
     </tr>
     <tr>
         <td>頭獎</td>
@@ -51,6 +51,7 @@
             <input style="width:55%" type="number" name="num3[]" placeholder="請輸入8位數號碼"><br>
             <input style="width:55%" type="number" name="num3[]" placeholder="請輸入8位數號碼"><br>
             <input style="width:55%" type="number" name="num3[]" placeholder="請輸入8位數號碼"><br>
+            同期統一發票收執聯8位數號碼與頭獎號碼相同者獎金20萬元
             <!-- <input type="number" name="num3[]"><br> -->
         </td>
     </tr>
